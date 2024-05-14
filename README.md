@@ -1,11 +1,13 @@
-# Django STK Push with M-Pesa Daraja API
+# Django STK Push with M-Pesa Daraja API 🔥😍
 
 This project demonstrates how to initiate an M-Pesa STK Push using the Django framework and the `django_daraja` library.
+
+![Django Stk push](https://ibb.co/mC8CVHT)
+
 
 ## Prerequisites
 
 - Python 3.8 or higher
-- Django 3.2 or higher
 - django_daraja library
 
 ## Setup Instructions

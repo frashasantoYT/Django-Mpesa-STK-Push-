@@ -4,6 +4,8 @@ This project demonstrates how to initiate an M-Pesa STK Push using the Django fr
 
 ![Django stk push Image](https://ibb.co/mC8CVHT)
 
+![image](https://ibb.co/mC8CVHT)
+
 
 
 ## Prerequisites

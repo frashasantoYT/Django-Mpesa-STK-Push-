@@ -24,14 +24,15 @@ def index(request):
         account_reference = 'reference'
         transcation_desc = 'Description'
        
-        callback_url = '' #enter your callback url here
+        callback_url = 'https://api.darajambili.com/express-payment' #enter your callback url here
 
         try:
             response = cl.stk_push(phone_number, amount, account_reference, transcation_desc, callback_url)
             success = "STK Push Initiated successfully"
+            return render(request, 'main/index.html', {'success': success})
         except MpesaInvalidParameterException as e:
             error = f'Failed to initiate STK push. {e}'
-            return render(request, 'index.html', {'error':error})
+            return render(request, 'main/index.html', {'error':error})
 
     return render(request, 'main/index.html')
   

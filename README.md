@@ -2,9 +2,9 @@
 
 This project demonstrates how to initiate an M-Pesa STK Push using the Django framework and the `django_daraja` library.
 
-![Django stk push Image](https://ibb.co/mC8CVHT)
+![Django stk push Image](/images/stk_push)
 
-![image](https://ibb.co/mC8CVHT)
+
 
 
 

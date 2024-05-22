@@ -4,19 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STK Push in Django</title>
-    <!--Bootstrap CSS -->
+    <!-- Include Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
+    <!-- Custom CSS for styling -->
     <style>
         body {
             background-color: #f8f9fa; 
         }
         .form-container {
             background-color: #ffffff; 
-            border-radius: 8px;
+            border-radius: 8px; 
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
             padding: 30px;
             margin-top: 50px; 
+        }
+        .loader {
+            display: none;
+            border: 8px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 8px solid #3498db;
+            width: 40px;
+            height: 40px;
+            animation: spin 2s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
@@ -25,8 +39,8 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="form-container">
-                    <h2 class="text-center mb-4">Mpesa STK Push in Django</h2>
-                    <form method="post">
+                    <h2 class="text-center mb-4">STK Push in Django</h2>
+                    <form method="post" onsubmit="showLoader()">
                         {% csrf_token %}
                         <div class="form-group">
                             <label for="phone_number">Phone Number</label>
@@ -36,6 +50,7 @@
                             <label for="amount">Amount</label>
                             <input type="number" class="form-control" id="amount" name="amount" placeholder="Enter amount" required>
                         </div>
+                        <div class="loader" id="loader"></div>
                         <button type="submit" class="btn btn-success btn-block">Initiate STK Push</button>
                     </form>
                     {% if error %}
@@ -51,7 +66,13 @@
                 </div>
             </div>
         </div>
-
+    </div>
+    <!-- Include Bootstrap JS (optional if you have no JavaScript dependencies) -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function showLoader() {
+            document.getElementById('loader').style.display = 'block';
+        }
+    </script>
 </body>
 </html>

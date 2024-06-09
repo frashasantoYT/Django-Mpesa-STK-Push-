@@ -5,3 +5,9 @@
 # Ignore IDE specific files
 .vscode/
 .idea
+
+
+main/__pycache__/
+
+
+Django_Daraja/__pycache__

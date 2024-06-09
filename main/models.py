@@ -1,9 +1,5 @@
 from django.db import models
 
-# Create your models here.
-# models.py
-from django.db import models
-
 class Transaction(models.Model):
     transaction_id = models.CharField(max_length=50, unique=True)
     amount = models.FloatField()
